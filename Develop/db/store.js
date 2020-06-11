@@ -1,10 +1,9 @@
-//create file in db folder store.js
-
-
+//require FS in store.js
+const fs = require("fs");
+//need pckg to install for uniqure IDs - check NPM
 
 
 //store class object
-    //package to install unique ids  -- npm 
     //inside store.js
 
 //***5 functions in store class object/file */
@@ -15,14 +14,18 @@
 //function to remove notes
 
 //need html & api routes
+
+
 // get/add/remove notes - 3 API routes
     // get/post/delete
+
+
     //routes folder
         //api route files
         //html routes
         //server.js
-//2 routes/notes for HTML
-// * for default route (will load index.html)
+
+
 
 
 //import express& api routes
@@ -38,8 +41,6 @@
 
 //START ON STORE.JS
 
-
-//requuire FS in store.js
 
 //doing reading and writing in here
         //writing includes deleting
