@@ -1,4 +1,7 @@
 const express = require("express");
-const apiRoutes = require("/.routes/apiRoutes.js");
 const htmlRoutes = require("./routes/htmlRoutes");
+const apiRoutes = require("./routes/apiRoutes");
+const app = express();
+
+const PORT = 8080;
 
