@@ -9,20 +9,21 @@ const readFile = util.promisify(fs.readFileSync)
 const writeFile = util.promisify(fs.writeFileSync);
 
 class Store {
-
+    //function to read notes
     read() {
         return readFile("db/db.json");
     }
+    //function to write notes
     write (note) {
-        return writeFile ("db/db.json");
+        return writeFile ("db/db.json", JSON.stringify(note));
     }
-
+    //function to get notes
     getNotes() {
         return this.read().then(notes => {
         });
     }
 
-    //add new note to db
+    //function to add new note to db
     addNotes(note){
         const {title, text} = note;
 
@@ -31,7 +32,7 @@ class Store {
         .then(updatedNotes => this.write(updatedNotes))
         .then(() => newNote);
     };
-    //delete notes by assigned id
+    //function to delete notes by assigned id
     deleteNotes(id){
         return this.getNotes().then(notes => notes.filter(note => note.id !== id))
         .then(filteredNotes => this.write(filteredNotes));
@@ -42,22 +43,6 @@ class Store {
 module.exports = new Store();
 
 
-
-
-
-//store class object
-    //inside store.js
-
-//***5 functions in store class object/file */
-//function to read note
-//function to write notes
-//function to get notes
-//functon to add note
-//function to remove notes
-
-//need html & api routes
-
-
 // get/add/remove notes - 3 API routes
     // get/post/delete
 
@@ -65,7 +50,6 @@ module.exports = new Store();
         //api route files
         //html routes
         //server.js
-
 
 
 
@@ -80,15 +64,6 @@ module.exports = new Store();
 
 //app.listen
 
-//START ON STORE.JS
-
-
-//doing reading and writing in here
-        //writing includes deleting
-
-        //need util npm package
-
-//module.exports on api & html route pages
 
 
 //push to git, THEN Push to heroku
