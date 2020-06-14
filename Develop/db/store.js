@@ -9,25 +9,30 @@ const readFile = util.promisify(fs.readFileSync)
 const writeFile = util.promisify(fs.writeFileSync);
 
 class Store {
+
     read() {
-        return 
-    };
-
+        return readFile("db/db.json");
+    }
     write (note) {
-    };
-
+        return writeFile ("db/db.json");
+    }
 
     getNotes() {
+        return this.read().then(notes => {
+        });
+    }
 
-    };
+    addNotes(note){
+        const {title, text} = note;
 
-    addNotes(){
-
-
+        const newNote = {title, text, id: uuid()};
+        return this.getNotes().then(notes => [...notes, newNote])
+        .then(updatedNotes => this.write(updatedNotes))
+        .then(() => newNote);
     };
 
     deleteNotes(){
-
+        
     };
 
 
