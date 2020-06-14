@@ -1,12 +1,16 @@
 //require FS in store.js
 const fs = require("fs");
+//require util
+const util = require("util");
 //package for unique IDs
 const uuid = require("uuid/v1");
 
+const readFile = util.promisify(fs.readFileSync)
+const writeFile = util.promisify(fs.writeFileSync);
 
 class Store {
     read() {
-
+        return 
     };
 
     write (note) {
@@ -15,16 +19,16 @@ class Store {
 
     getNotes() {
 
-    }
+    };
 
     addNotes(){
 
 
-    }
+    };
 
     deleteNotes(){
 
-    }
+    };
 
 
 }
