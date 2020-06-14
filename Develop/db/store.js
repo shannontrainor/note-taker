@@ -1,6 +1,38 @@
 //require FS in store.js
 const fs = require("fs");
-//need pckg to install for uniqure IDs - check NPM
+//package for unique IDs
+const uuid = require("uuid/v1");
+
+
+class Store {
+    read() {
+
+    };
+
+    write (note) {
+    };
+
+
+    getNotes() {
+
+    }
+
+    addNotes(){
+
+
+    }
+
+    deleteNotes(){
+
+    }
+
+
+}
+
+
+
+
+
 
 
 //store class object
@@ -18,7 +50,6 @@ const fs = require("fs");
 
 // get/add/remove notes - 3 API routes
     // get/post/delete
-
 
     //routes folder
         //api route files
@@ -48,3 +79,7 @@ const fs = require("fs");
         //need util npm package
 
 //module.exports on api & html route pages
+
+
+//push to git, THEN Push to heroku
+
