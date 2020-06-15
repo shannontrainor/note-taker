@@ -1,3 +1,5 @@
+const http = require("http");
+const fs = require("fs");
 const express = require("express");
 const htmlRoutes = require("./routes/htmlRoutes");
 const apiRoutes = require("./routes/apiRoutes");
@@ -14,4 +16,6 @@ app.use(express.static("public"));
 app.use("/api", apiRoutes);
 app.use("/", htmlRoutes);
 
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+app.listen(PORT, () => {
+    console.log(`Listening on http://localhost:${PORT}`);
+});
