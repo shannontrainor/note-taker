@@ -3,7 +3,8 @@ const fs = require("fs");
 //require util
 const util = require("util");
 //package for unique IDs
-const uuid = require("uuidv1");
+const { v4: uuidv4 } = require('uuid');
+
 
 const readFile = util.promisify(fs.readFileSync)
 const writeFile = util.promisify(fs.writeFileSync);
@@ -20,6 +21,13 @@ class Store {
     //function to get notes
     getNotes() {
         return this.read().then(notes => {
+            let parseNote;
+            try {
+                parseNote = [].concat(JSON.parse(notes))
+            } catch (err) {
+                parseNote = []
+            }
+            return parseNote;
         });
     }
 
