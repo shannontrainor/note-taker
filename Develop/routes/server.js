@@ -1,9 +1,10 @@
 const express = require("express");
-const htmlRoutes = require("./routes/htmlRoutes");
-const apiRoutes = require("./routes/apiRoutes");
+const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+//port where app will listen
+const PORT = process.env.PORT || 8080;
 
 
 //taken from previous activities

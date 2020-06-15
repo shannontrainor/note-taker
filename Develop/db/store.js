@@ -51,16 +51,5 @@ class Store {
 module.exports = new Store();
 
 
-
-//import express& api routes
-//create port
-//body parsing w/ static data
-    //from activities
-
-//initialize routes
-    // /api routes
-    // app.use
-
-
 //push to git, THEN Push to heroku
 
